@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <a href="https://www.w3.org/" id="a1">
+            World Wide Web Consortium (W3C)</a>
+        <script>
+            var myLink = document.getElementById('a1');
+            function sayHello() {
+                alert('hello W3C!');
+            }
+            myLink.addEventListener('click', sayHello)
+        </script>
+    </body>
+</html>

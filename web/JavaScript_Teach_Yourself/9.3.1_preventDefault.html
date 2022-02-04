@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Preventing Default Action</title>
+        <script>
+            window.onload = function() {
+                var Go = document.getElementById('a1');
+                var NoGo = document.getElementById('a2');
+                function permitAccess() {
+                    alert('Go right ahead - have fun!');
+                }
+                function refuseAccess(e) {
+                    alert('Sorry, but you are not yet authorized to follow this link.');
+                    e.preventDefault();
+                }
+                Go.addEventListener('click', permitAccess);
+                NoGo.addEventListener('click', refuseAccess);
+            }
+        </script>
+    </head>
+    <body>
+        <a href='https://www.github.com' target=_blank id='a1'>
+            Go to Github
+        </a><br/>
+        <a href='https://www.github.com' target=_blank id='a2'>
+            Do Not go to Github
+        </a>
+    </body>
+</html>

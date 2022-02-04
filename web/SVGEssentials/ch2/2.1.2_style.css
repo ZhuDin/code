@@ -1,0 +1,5 @@
+div.background-cat {
+    background-image: url("cat.svg");
+    background-size: 100% 100%;
+    text-align: center;
+}

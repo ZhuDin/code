@@ -1,0 +1,29 @@
+mongod  # start the mongodb on shell
+mongo   # start the mongodb shell default port:27017
+    mongo some-host-address:port/dbName
+    mongo --nodb
+        conn = new Mongo('some-host-address:port')
+        db = conn.getDB('dbName')
+
+db      # show current database
+use <dbName>  # switched to dbName(set)
+db.dbName   # show current collections(table)
+obj = {"key1": "value1", 'key2': 'value2'}  #create object
+db.mycoll.insertOne(obj)    # insert data
+db.mycoll.find().pretty()   # list objects in colletion mycoll
+    mycoll.find({key:value}) # list objects in mycoll where key==value
+db.mycoll.findOne()         # read the first data
+db.mycoll.updateOne({'key': 'value'}, {$set: {'keyN': 'valueN'}})    #update dbData
+db.mycoll.deleteOne({'key': 'value'})   # delete data
+db.mycoll.deleteMany({'key': 'value'})  # delete data
+
+help
+show dbs            # show database names
+show collections    # show collections in current database
+show users          # show users in current database
+show profile        # show most recent system.profile entries with time >= 1ms
+show logs           # show the accessible logger names
+show log [name]     # print out the last segment of log in memory, 'global' is default
+it                  # resutl of the last line evaluated; use to further iterate
+DBQuery.shellBatchSize = x  # set default number of items to display on shell
+exit                # quit the mongo shell
