@@ -1,0 +1,45 @@
+git version
+
+git config --global user.name 'name'
+git config --global user.email 'xxx@xx.com'
+git coinfig --list
+
+git help <verb>
+git <verb> --help
+man git-<verb>
+    git help config 
+
+git clone 'https://github.com/ZhuDin/code.git'
+git init
+git add filename
+git commit -m 'init'
+git status
+git status -s
+cat .gitignore
+git diff
+git diff --cached
+git rm --cached filename
+git mv file file | dir
+git log
+    git log -p -2
+    git log --stat
+    git log --pretty=oneline
+    git log --pretty='%h - %an, %ar : %s'
+    git log --pretty="%h %s" --graph
+git show commit_id
+git commit --amend
+git reset HEAD filename
+git checkout filename
+git remote
+    git remote -v
+git fetch [remote-name]
+git push origin master
+git remote show origin
+
+
+
+git help [-a | --all] [-g | --guide]
+    [-i | --info | -m | --man | -w | --web] [COMMAND | GUIDE] 
+    git config --global help.format web
+    git config --global web.browser firefox
+    git help help
