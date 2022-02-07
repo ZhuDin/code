@@ -27,14 +27,21 @@ git log
     git log --pretty='%h - %an, %ar : %s'
     git log --pretty="%h %s" --graph
 git show commit_id
-git commit --amend
-git reset HEAD filename
+git commit --amend -m 'comment'
+git reset --HEAD filename
+git rest --soft HEAD^
 git checkout filename
 git remote
     git remote -v
 git fetch [remote-name]
 git push origin master
 git remote show origin
+git pull
+git stash
+    git stash list
+    git stash pop
+git branch
+git tag
 
 
 
@@ -43,3 +50,4 @@ git help [-a | --all] [-g | --guide]
     git config --global help.format web
     git config --global web.browser firefox
     git help help
+
